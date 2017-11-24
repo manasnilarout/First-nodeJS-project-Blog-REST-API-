@@ -44,9 +44,10 @@ var blogModel = require('./Model.js');
 //default route
 app.get('/', function (req, res) {
 
-  res.send("This is a sample blog application..Some route samples are 1.");
+  res.send("This is a sample blog application, having routes to access and manipulate the blogs using different routes...");
 
 });
+
 
 /////all the manipulating routes start here//////
 //route to get all the blogs at once
@@ -71,8 +72,9 @@ app.get('/allblogs',function(req,res){
 app.get('/allblogs/:id',function(req,res){
 	
 	blogModel.findById({
-		_id: req.params.id
+		_id: req.params.id //the id that is created when you make a new blog
 	}, function (err, result) {
+
 		if (err) {
 			console.log('Error in finding the blog by ID');
 			res.send(err);
@@ -96,7 +98,8 @@ app.post('/blog/create', function (req, res) {
 
 	//assigning date
 	newBlog.created = Date.now();
-
+	//last-modified date
+	newBlog.lastModified = Date();
 	
 	//to save the entered details and error handeling
 	newBlog.save(function (error, result) {
