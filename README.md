@@ -7,4 +7,4 @@ So the node JS application developed is totally based upon the routes for manipu
 3.'/allblogs/:id/find' - Help to find the particular blog using the blog ID which is created during creation of a blog  
 4.'/blog/create' - It is used to create a blog using post method  
 5.'/allblogs/:id/edit' - It is used to edit the properties of a particular blog using blog ID in put method  
-6.'/allblogs/:id/delete' - It is used to delete a complete blog using blog ID  
+6.'/allblogs/:id/delete' - It is used to delete a complete blog using blog ID
