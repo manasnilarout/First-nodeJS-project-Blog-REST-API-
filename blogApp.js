@@ -152,7 +152,7 @@ app.post('/allblogs/:id/delete', function(req,res){
 
 
 
-
+//to make the application listen in a particular port
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
